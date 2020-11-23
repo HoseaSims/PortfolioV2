@@ -1,0 +1,132 @@
+a{
+    text-decoration: none;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    margin: 0%;
+}
+
+.home{
+    background-color: black;
+    color: white;
+    height: 100vh;
+
+    background: linear-gradient(304deg, #1e86ff,#ff8d4d, #ff5cea);
+    background-size: 600% 600%;
+    animation: AnimationName 30s ease infinite;
+
+}
+
+h1{
+    text-shadow: 7px 7px 7px black;
+
+}
+
+.sub-text{
+    /*border-style: solid;
+    border-width: 2px 0 2px 0;*/
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid white; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: 
+      typing 3.5s steps(40, end),
+      blink-caret .75s step-end infinite;
+  
+}
+
+.skills{
+    padding-top: 4rem;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+}
+
+.section{
+    
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+
+.projects{
+    display: flex;
+    
+}
+
+.card-img{
+    width: 50rem;
+    flex: 33.33%;
+    padding-top: 4rem;
+    padding-right: 4rem;
+}
+
+.card-img{
+    width: 50rem;
+    transition: 1s;
+
+}
+
+.card-img:hover{
+    width: 60rem;
+    transition: 1s;
+}
+
+.project-text{
+    color: black;
+}
+
+.skill-icons{
+    font-size: 4rem;
+    animation: color-change 30s infinite;
+    animation-timing-function: ease;
+}
+
+.contact{
+    padding-top: 1rem;
+    background-color: #333;
+    animation: color-change 30s infinite;
+    
+}
+
+.contact-icons{
+    padding-right: 4rem;
+}
+
+
+
+@keyframes AnimationName {
+    0%{background-position:0% 17%}
+    50%{background-position:100% 84%}
+    100%{background-position:0% 17%}
+}
+
+@keyframes typing{
+    from{width: 0;}
+    to{width: 100%;}
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent }
+    50% { border-color: white; }
+  }
+
+  @keyframes color-change {
+      0% {color: #ff5cea;}
+      25% {color: #ff8d4d;}
+      50% {color: #1e86ff;} 
+      75% {color: #ff8d4d};
+      100% {color: #ff5cea;}
+    
+  }
+
+  /*@keyframes grow-shrink{
+      0% {width: 50rem;}
+      100% {width: 60rem;}
+      
+  }
+  
