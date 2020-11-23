@@ -41,38 +41,50 @@ h1{
 
 .skills{
     padding-top: 4rem;
-    height: 100vh;
+    padding-bottom: 4rem;
     background-color: #333;
     color: #fff;
+    height: 100vh;
 }
 
 .section{
     
-    display: grid;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
+}
+
+.weather-app{
+    order: 1;
+}
+
+.todo-list{
+    order: 1;
 }
 
 .projects{
-    display: flex;
+    
+    flex-direction: row;
     
 }
 
-.card-img{
-    width: 50rem;
-    flex: 33.33%;
-    padding-top: 4rem;
-    padding-right: 4rem;
+.project-header{
+    
+}
+
+.project-description{
+    font-size: 1rem;
 }
 
 .card-img{
-    width: 50rem;
+    width: 49vw;
     transition: 1s;
-
+    
+    justify-content: space-evenly;
 }
 
 .card-img:hover{
-    width: 60rem;
+    width: 60vw;
     transition: 1s;
 }
 
@@ -82,6 +94,7 @@ h1{
 
 .skill-icons{
     font-size: 4rem;
+    
     animation: color-change 30s infinite;
     animation-timing-function: ease;
 }
@@ -89,12 +102,12 @@ h1{
 .contact{
     padding-top: 1rem;
     background-color: #333;
-    animation: color-change 30s infinite;
     
 }
 
 .contact-icons{
     padding-right: 4rem;
+    animation: color-change 30s infinite;
 }
 
 
