@@ -5,18 +5,35 @@ a{
 body{
     font-family: 'Roboto', sans-serif;
     text-align: center;
-    font-size: 3rem;
-    margin: 0%;
+    
+    margin: 0;
 }
+
+::-webkit-scrollbar {
+    width: 1em;
+    background-color: black;
+    border-style: solid;
+    border-width: 1px;
+    color: rgba(255,255,255,.3);
+    
+}
+
+
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to top, #ff8d4d, #00ffe7);
+    border-radius: 10px;
+
+  }
 
 .home{
     background-color: black;
     color: white;
     height: 100vh;
-
+    padding-top: 45vh;
     background: linear-gradient(304deg, #1e86ff,#ff8d4d, #ff5cea);
     background-size: 600% 600%;
-    animation: AnimationName 30s ease infinite;
+    animation: background-gradient 30s ease infinite;
 
 }
 
@@ -26,66 +43,31 @@ h1{
 }
 
 .sub-text{
-    /*border-style: solid;
-    border-width: 2px 0 2px 0;*/
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid white; /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    letter-spacing: .15em; /* Adjust as needed */
-    animation: 
-      typing 3.5s steps(40, end),
-      blink-caret .75s step-end infinite;
-  
-}
-
-.skills{
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    background-color: #333;
-    color: #fff;
-    height: 100vh;
-}
-
-.section{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.weather-app{
-    order: 1;
-}
-
-.todo-list{
-    order: 1;
+   
+  animation: fade-in 3s;
 }
 
 .projects{
     
-    flex-direction: row;
-    
 }
 
-.project-header{
-    
-}
 
 .project-description{
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 .card-img{
-    width: 49vw;
-    transition: 1s;
-    
-    justify-content: space-evenly;
+    border-style: solid;
+    border-width: 5px;
+    transition: .5s;
+    color: rgba(255,255,255, 0);
 }
 
 .card-img:hover{
-    width: 60vw;
-    transition: 1s;
+    border-style: solid;
+    border-width: 1px;
+    color: rgba(200,200,200, 0);
+    transition: .5s;
 }
 
 .project-text{
@@ -93,10 +75,13 @@ h1{
 }
 
 .skill-icons{
-    font-size: 4rem;
+    font-size: 2rem;
+    background: linear-gradient(to top, #008aff, #00ffe7);
+    animation: color-change 10s linear infinite;
+    -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
     
-    animation: color-change 30s infinite;
-    animation-timing-function: ease;
 }
 
 .contact{
@@ -106,40 +91,46 @@ h1{
 }
 
 .contact-icons{
-    padding-right: 4rem;
-    animation: color-change 30s infinite;
+    animation: color-change 20s infinite;
 }
 
 
 
-@keyframes AnimationName {
+@keyframes background-gradient {
     0%{background-position:0% 17%}
     50%{background-position:100% 84%}
     100%{background-position:0% 17%}
 }
 
-@keyframes typing{
-    from{width: 0;}
-    to{width: 100%;}
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: white; }
+/* Animation */
+.anim-typewriter{
+    animation: typewriter 4s steps(44) 1s 1 normal both,
+               blinkTextCursor 500ms steps(44) infinite normal;
   }
+  
 
   @keyframes color-change {
-      0% {color: #ff5cea;}
-      25% {color: #ff8d4d;}
-      50% {color: #1e86ff;} 
-      75% {color: #ff8d4d};
-      100% {color: #ff5cea;}
+      0%, 100%{
+          filter: hue-rotate(0deg);
+      }
+
+      50%{
+          filter: hue-rotate(360deg);
+      }
     
   }
 
-  /*@keyframes grow-shrink{
-      0% {width: 50rem;}
-      100% {width: 60rem;}
-      
+  @keyframes backgoundcolor-change {
+    0% {background-color: #fff;}
+    25% {background-color: #4CE0B3;}
+    50% {background-color: #F4E409;} 
+    75% {background-color: #5762D5};
+    100% {background-color: #fff;}
+  
+}
+
+  @keyframes fade-in{
+      from {color: transparent;}
+      to {color: white;}
   }
   
